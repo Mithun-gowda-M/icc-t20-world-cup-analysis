@@ -7,8 +7,12 @@ let charts = {};
 
 async function init() {
   try {
-    const res = await fetch('cricket_summary.json');
-    cricketData = await res.json();
+    if (window.CRICKET_SUMMARY) {
+      cricketData = window.CRICKET_SUMMARY;
+    } else {
+      const res = await fetch('cricket_summary.json');
+      cricketData = await res.json();
+    }
     renderKPIs(cricketData.kpis);
     renderTimelineChart(cricketData.editions);
     renderTeamChart(cricketData.topTeams);
