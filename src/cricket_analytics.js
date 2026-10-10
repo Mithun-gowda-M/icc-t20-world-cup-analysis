@@ -131,7 +131,7 @@ function processCricketData(dataDir) {
       venueStats[venue].totalRuns += matchRuns;
 
       // Update Player of the Match
-      if (pom && pom !== 'Not awarded') {
+      if (pom && pom !== 'Not awarded' && pom !== 'NA' && pom !== 'None') {
         if (!playerStats[pom]) playerStats[pom] = { player: pom, awards: 0, teams: new Set() };
         playerStats[pom].awards += 1;
         if (winner) playerStats[pom].teams.add(winner);
@@ -199,6 +199,21 @@ function processCricketData(dataDir) {
   });
   fs.writeFileSync(path.join(dataDir, 'all_t20_matches_2007_2021.csv'), masterCsv);
 
+  // AIML Integration: Bradley-Terry Elo Win Probability & Player Impact Metric
+  const { calculateEloRatings, predictMatchOutcome, calculatePlayerImpactMetric, venueMonteCarloParScores } = require('./cricket_ml_engine');
+  const eloMap = calculateEloRatings(topTeams);
+  
+  // Sample headline matchups
+  const sampleMatchups = [
+    predictMatchOutcome('India', 'Pakistan', eloMap),
+    predictMatchOutcome('Australia', 'England', eloMap),
+    predictMatchOutcome('South Africa', 'West Indies', eloMap),
+    predictMatchOutcome('New Zealand', 'Sri Lanka', eloMap)
+  ];
+
+  const pimRankings = calculatePlayerImpactMetric(topPlayers);
+  const venueSimulations = venueMonteCarloParScores(topVenues, 300);
+
   return {
     kpis: {
       totalTournaments: editions.length,
@@ -207,6 +222,12 @@ function processCricketData(dataDir) {
       totalWickets,
       avgRunsPerMatch: Number((totalRuns / totalMatches).toFixed(1)),
       avgWicketsPerMatch: Number((totalWickets / totalMatches).toFixed(1))
+    },
+    aiIntelligence: {
+      eloRatings: eloMap,
+      sampleMatchups,
+      playerImpactScores: pimRankings,
+      venueSimulations
     },
     editions: Object.values(editionStats),
     topTeams: topTeams.slice(0, 12),

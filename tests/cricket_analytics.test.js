@@ -44,4 +44,22 @@ assert(result.topPlayers.length > 0, 'POM leaders must be populated');
 assert(result.topPlayers[0].awards >= 4, 'Top MVP should have at least 4 awards');
 console.log(`✓ Test 5 Passed: Player of the Match MVP records verified (Top: ${result.topPlayers[0].player} with ${result.topPlayers[0].awards} awards)`);
 
-console.log('\nAll ICC T20 World Cup Analytics tests passed successfully! (5/5)');
+// Test 6: AIML Bradley-Terry Elo Win Probability
+const matchups = result.aiIntelligence.sampleMatchups;
+assert(matchups.length >= 4, 'Must simulate sample headline matchups');
+matchups.forEach(m => {
+  const sum = Number((m.probA + m.probB).toFixed(1));
+  assert.strictEqual(sum, 100.0, `Probabilities must sum to 100%, got ${sum}%`);
+  assert(m.eloA > 1000 && m.eloB > 1000, 'Elo ratings must be calibrated > 1000');
+});
+console.log(`✓ Test 6 Passed: AIML Bradley-Terry Elo match prediction probability conservation verified (${matchups[0].teamA} vs ${matchups[0].teamB}: ${matchups[0].probA}% - ${matchups[0].probB}%)`);
+
+// Test 7: AIML Player Impact Metric (PIM)
+const pim = result.aiIntelligence.playerImpactScores;
+assert(pim.length > 0, 'PIM scores must be generated');
+pim.forEach(p => {
+  assert(p.pimScore >= 0 && p.pimScore <= 100, `PIM score out of bounds [0, 100]: ${p.pimScore}`);
+});
+console.log(`✓ Test 7 Passed: AIML Multi-factor Player Impact Metric (PIM) verified (#1: ${pim[0].player} - ${pim[0].pimScore}/100)`);
+
+console.log('\nAll ICC T20 World Cup Analytics tests passed successfully! (7/7)');

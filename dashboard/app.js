@@ -14,9 +14,79 @@ async function init() {
     renderTeamChart(cricketData.topTeams);
     renderVenueChart(cricketData.topVenues);
     renderPomChart(cricketData.topPlayers);
+    renderAICharts(cricketData.aiIntelligence);
     renderFinalsTable(cricketData.recentFinals);
   } catch (err) {
     console.error('Failed to load cricket data:', err);
+  }
+}
+
+function renderAICharts(ai) {
+  if (!ai) return;
+
+  // 1. Matchup Simulator Output
+  const simContainer = document.getElementById('matchupSimulatorOutput');
+  if (simContainer && ai.sampleMatchups) {
+    simContainer.innerHTML = '';
+    ai.sampleMatchups.forEach(m => {
+      const card = document.createElement('div');
+      card.style.cssText = 'padding: 10px 14px; background: rgba(255, 255, 255, 0.03); border-radius: 8px; border: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;';
+      card.innerHTML = `
+        <div style="flex: 1;">
+          <strong style="color: ${m.probA > m.probB ? '#34d399' : '#f1f5f9'};">${m.teamA}</strong>
+          <span style="font-size: 11px; color: #94a3b8; margin-left: 4px;">(${m.eloA} Elo)</span>
+          <span style="margin: 0 6px; color: #64748b;">vs</span>
+          <strong style="color: ${m.probB > m.probA ? '#34d399' : '#f1f5f9'};">${m.teamB}</strong>
+          <span style="font-size: 11px; color: #94a3b8; margin-left: 4px;">(${m.eloB} Elo)</span>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <span style="font-size: 12px; font-weight: 700; color: #38bdf8;">${m.probA}% - ${m.probB}%</span>
+          <span style="font-size: 11px; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 2px 8px; border-radius: 6px;">Pick: ${m.predictedWinner}</span>
+        </div>
+      `;
+      simContainer.appendChild(card);
+    });
+  }
+
+  // 2. Par Score Chart
+  const simVenues = ai.venueSimulations;
+  if (simVenues) {
+    const labels = simVenues.map(v => v.venue);
+    const medians = simVenues.map(v => v.medianPar);
+    const p90s = simVenues.map(v => v.p90Par);
+
+    const ctxPar = document.getElementById('parScoreChart')?.getContext('2d');
+    if (ctxPar) {
+      charts.parScore = new Chart(ctxPar, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: 'Median 1st Innings Par',
+              data: medians,
+              backgroundColor: 'rgba(2, 132, 199, 0.8)',
+              borderRadius: 4
+            },
+            {
+              label: '90th Percentile Ceiling',
+              data: p90s,
+              backgroundColor: 'rgba(245, 158, 11, 0.75)',
+              borderRadius: 4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { labels: { color: '#94a3b8' } } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
+            y: { grid: { color: 'rgba(255, 255, 255, 0.04)' }, ticks: { color: '#94a3b8' }, title: { display: true, text: 'Runs', color: '#64748b' } }
+          }
+        }
+      });
+    }
   }
 }
 

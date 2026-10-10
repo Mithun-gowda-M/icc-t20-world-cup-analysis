@@ -7,6 +7,210 @@
     "avgRunsPerMatch": 277.8,
     "avgWicketsPerMatch": 12.2
   },
+  "aiIntelligence": {
+    "eloRatings": {
+      "Sri Lanka": 1749,
+      "Pakistan": 1720,
+      "India": 1731,
+      "South Africa": 1717,
+      "Australia": 1711,
+      "New Zealand": 1678,
+      "England": 1652,
+      "West Indies": 1644,
+      "Bangladesh": 1459,
+      "Afghanistan": 1497,
+      "Zimbabwe": 1498,
+      "Netherlands": 1470,
+      "Scotland": 1428,
+      "Ireland": 1405,
+      "Namibia": 1457,
+      "Oman": 1424,
+      "Hong Kong": 1324
+    },
+    "sampleMatchups": [
+      {
+        "teamA": "India",
+        "teamB": "Pakistan",
+        "eloA": 1731,
+        "eloB": 1720,
+        "probA": 51.6,
+        "probB": 48.4,
+        "predictedWinner": "India"
+      },
+      {
+        "teamA": "Australia",
+        "teamB": "England",
+        "eloA": 1711,
+        "eloB": 1652,
+        "probA": 58.4,
+        "probB": 41.6,
+        "predictedWinner": "Australia"
+      },
+      {
+        "teamA": "South Africa",
+        "teamB": "West Indies",
+        "eloA": 1717,
+        "eloB": 1644,
+        "probA": 60.4,
+        "probB": 39.6,
+        "predictedWinner": "South Africa"
+      },
+      {
+        "teamA": "New Zealand",
+        "teamB": "Sri Lanka",
+        "eloA": 1678,
+        "eloB": 1749,
+        "probA": 39.9,
+        "probB": 60.1,
+        "predictedWinner": "Sri Lanka"
+      }
+    ],
+    "playerImpactScores": [
+      {
+        "player": "Chris Gayle",
+        "awards": 5,
+        "team": "South Africa",
+        "pimScore": 100,
+        "impactTier": "Elite Match Winner"
+      },
+      {
+        "player": "Mahela Jayawardene",
+        "awards": 5,
+        "team": "Sri Lanka",
+        "pimScore": 100,
+        "impactTier": "Elite Match Winner"
+      },
+      {
+        "player": "Shane Watson",
+        "awards": 5,
+        "team": "Australia",
+        "pimScore": 100,
+        "impactTier": "Elite Match Winner"
+      },
+      {
+        "player": "Virat Kohli",
+        "awards": 5,
+        "team": "India",
+        "pimScore": 100,
+        "impactTier": "Elite Match Winner"
+      },
+      {
+        "player": "Shahid Afridi",
+        "awards": 4,
+        "team": "Pakistan",
+        "pimScore": 100,
+        "impactTier": "Elite Match Winner"
+      },
+      {
+        "player": "AB de Villiers",
+        "awards": 4,
+        "team": "South Africa",
+        "pimScore": 100,
+        "impactTier": "Elite Match Winner"
+      },
+      {
+        "player": "Tillakaratne Dilshan",
+        "awards": 4,
+        "team": "Sri Lanka",
+        "pimScore": 100,
+        "impactTier": "Elite Match Winner"
+      },
+      {
+        "player": "Kevin Pietersen",
+        "awards": 3,
+        "team": "England",
+        "pimScore": 82,
+        "impactTier": "Key Impact Performer"
+      },
+      {
+        "player": "Sanath Jayasuriya",
+        "awards": 3,
+        "team": "Sri Lanka",
+        "pimScore": 80,
+        "impactTier": "Key Impact Performer"
+      },
+      {
+        "player": "Yuvraj Singh",
+        "awards": 3,
+        "team": "India",
+        "pimScore": 78,
+        "impactTier": "Key Impact Performer"
+      },
+      {
+        "player": "Umar Gul",
+        "awards": 3,
+        "team": "Pakistan",
+        "pimScore": 76,
+        "impactTier": "Key Impact Performer"
+      },
+      {
+        "player": "Luke Wright",
+        "awards": 3,
+        "team": "England",
+        "pimScore": 74,
+        "impactTier": "Key Impact Performer"
+      },
+      {
+        "player": "Daren Sammy",
+        "awards": 3,
+        "team": "West Indies",
+        "pimScore": 72,
+        "impactTier": "Key Impact Performer"
+      },
+      {
+        "player": "Angelo Mathews",
+        "awards": 3,
+        "team": "Sri Lanka",
+        "pimScore": 70,
+        "impactTier": "Key Impact Performer"
+      },
+      {
+        "player": "Marlon Samuels",
+        "awards": 3,
+        "team": "West Indies",
+        "pimScore": 68,
+        "impactTier": "Key Impact Performer"
+      }
+    ],
+    "venueSimulations": [
+      {
+        "venue": "R.Premadasa Stadium",
+        "p10Par": 108,
+        "medianPar": 135,
+        "p90Par": 156
+      },
+      {
+        "venue": "Zahur Ahmed Chowdhury Stadium",
+        "p10Par": 109,
+        "medianPar": 133,
+        "p90Par": 160
+      },
+      {
+        "venue": "Sheikh Zayed Stadium",
+        "p10Par": 110,
+        "medianPar": 135,
+        "p90Par": 159
+      },
+      {
+        "venue": "Shere Bangla National Stadium",
+        "p10Par": 118,
+        "medianPar": 142,
+        "p90Par": 165
+      },
+      {
+        "venue": "Dubai International Cricket Stadium",
+        "p10Par": 111,
+        "medianPar": 131,
+        "p90Par": 153
+      },
+      {
+        "venue": "Kensington Oval",
+        "p10Par": 124,
+        "medianPar": 145,
+        "p90Par": 167
+      }
+    ]
+  },
   "editions": [
     {
       "year": 2007,
@@ -225,11 +429,6 @@
       "team": "South Africa"
     },
     {
-      "player": "NA",
-      "awards": 5,
-      "team": "NA"
-    },
-    {
       "player": "Mahela Jayawardene",
       "awards": 5,
       "team": "Sri Lanka"
@@ -293,6 +492,11 @@
       "player": "Angelo Mathews",
       "awards": 3,
       "team": "Sri Lanka"
+    },
+    {
+      "player": "Marlon Samuels",
+      "awards": 3,
+      "team": "West Indies"
     }
   ],
   "recentFinals": [
