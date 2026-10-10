@@ -1,5 +1,12 @@
-# ICC T20 World Cup Analysis - Power BI Report Guide
+# ICC T20 World Cup Analytics & Predictive AI Engine - Power BI Implementation Guide
 
+> **Academic Capstone Submission • Final Year Engineering in AIML**  
+> **Student Name**: Mithun Gowda M  
+> **Program**: B.E. / B.Tech in Artificial Intelligence & Machine Learning (AIML)  
+> **Department**: Department of Computer Science & Engineering (AIML)  
+> **Repository**: [https://github.com/Mithun-gowda-M/icc-t20-world-cup-analysis](https://github.com/Mithun-gowda-M/icc-t20-world-cup-analysis)  
+
+---
 ## 1. Overview
 Analyzes 223 matches across 7 editions (2007, 2009, 2010, 2012, 2014, 2016, 2021) of the ICC Men's T20 World Cup, evaluating team records, venue behavior, runs scored, and Player of the Match awards.
 
@@ -32,3 +39,9 @@ Analyzes 223 matches across 7 editions (2007, 2009, 2010, 2012, 2014, 2016, 2021
    - Visual: Horizontal Bar Chart
    - Y-Axis: `Player_Of_The_Match`
    - X-Axis: `[Player POM Awards Count]`
+
+
+### 5. AIML Integration in Power BI
+- **Tournament Elo Rating Dimension**: Ingest calibrated historical Elo ratings and win expectancy matrices into Power BI.
+- **Player Impact Metric (PIM / MVP) Leaderboard**: Feed normalized PIM ratings into a Power BI decomposed tree / ranking card.
+- **Python Visual in Power BI Desktop**: Render Monte Carlo 1st innings par score probability density distributions (KDE) per venue.

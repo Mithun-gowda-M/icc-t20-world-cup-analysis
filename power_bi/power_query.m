@@ -1,3 +1,12 @@
+/* ====================================================================
+   ACADEMIC CAPSTONE SUBMISSION • FINAL YEAR ENGINEERING IN AIML
+   Project: ICC T20 World Cup Analytics & Predictive AI Engine
+   Author: Mithun Gowda M (Final Year B.E. / B.Tech AIML)
+   Department: Department of Computer Science & Engineering (AIML)
+   File: Power Query M ETL Script Suite
+   Repository: https://github.com/Mithun-gowda-M/icc-t20-world-cup-analysis
+   ==================================================================== */
+
 // ====================================================================
 // POWER QUERY (M) - ICC T20 WORLD CUP MULTI-FILE COMBINER & ETL
 // ====================================================================

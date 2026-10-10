@@ -1,7 +1,8 @@
 /**
- * Automated Test Suite - ICC T20 World Cup Analytics
+ * Automated Test Suite - ICC T20 World Cup Analytics & Predictive AI Engine
+ * Academic Capstone Submission • Final Year Engineering in AIML
+ * Student: Mithun Gowda M (B.E. / B.Tech AIML)
  */
-
 const assert = require('assert');
 const path = require('path');
 const { processCricketData, parseScore } = require('../src/cricket_analytics');

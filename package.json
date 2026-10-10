@@ -1,0 +1,24 @@
+{
+  "name": "icc-t20-world-cup-analysis",
+  "version": "1.0.0",
+  "description": "Final Year AIML Engineering Capstone • Bradley-Terry Elo Win Probability Engine, Player Impact Metric (PIM), Monte Carlo Par Score Simulator & Power BI Suite",
+  "main": "src/cricket_ml_engine.js",
+  "scripts": {
+    "test": "node tests/cricket_analytics.test.js",
+    "start": "npx serve dashboard",
+    "build": "node src/cricket_ml_engine.js"
+  },
+  "keywords": [
+    "machine-learning",
+    "power-bi",
+    "sports-analytics",
+    "bradley-terry-model",
+    "elo-rating",
+    "cricket-ai",
+    "aiml-capstone",
+    "final-year-engineering"
+  ],
+  "author": "Mithun Gowda M <Final Year B.E. / B.Tech in Artificial Intelligence & Machine Learning (AIML)>",
+  "license": "MIT",
+  "homepage": "https://github.com/Mithun-gowda-M/icc-t20-world-cup-analysis"
+}
