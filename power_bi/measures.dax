@@ -1,0 +1,78 @@
+/* ====================================================================
+   POWER BI DAX MEASURES SUITE - ICC T20 WORLD CUP ANALYTICS (2007-2021)
+   ==================================================================== */
+
+// --- 1. TOURNAMENT OVERVIEW SUMMARY CARDS ---
+
+Total Matches Played = 
+COUNTROWS('T20_Matches')
+
+Total Runs Scored = 
+SUM('T20_Matches'[Total_Match_Runs])
+
+Total Wickets Taken = 
+SUM('T20_Matches'[Total_Match_Wickets])
+
+Average Runs Per Match = 
+DIVIDE([Total Runs Scored], [Total Matches Played], 0)
+
+Average Wickets Per Match = 
+DIVIDE([Total Wickets Taken], [Total Matches Played], 0)
+
+Tournament Editions Count = 
+DISTINCTCOUNT('T20_Matches'[Edition])
+
+
+// --- 2. TEAM PERFORMANCE & WIN-LOSS METRICS ---
+
+Team Total Wins = 
+VAR SelectedTeam = SELECTEDVALUE('Teams_Dim'[TeamName])
+RETURN
+    CALCULATE(
+        [Total Matches Played],
+        'T20_Matches'[Winner] = SelectedTeam
+    )
+
+Team Total Matches = 
+VAR SelectedTeam = SELECTEDVALUE('Teams_Dim'[TeamName])
+RETURN
+    CALCULATE(
+        [Total Matches Played],
+        'T20_Matches'[Team1] = SelectedTeam || 'T20_Matches'[Team2] = SelectedTeam
+    )
+
+Team Win Rate % = 
+DIVIDE([Team Total Wins], [Team Total Matches], 0) * 100
+
+World Cup Titles Won = 
+CALCULATE(
+    COUNTROWS('T20_Matches'),
+    CONTAINSSTRING('T20_Matches'[Stage], "Final") && NOT(CONTAINSSTRING('T20_Matches'[Stage], "Semi"))
+)
+
+
+// --- 3. VENUE PERFORMANCE METRICS ---
+
+Venue Matches Hosted = 
+COUNTROWS('T20_Matches')
+
+Venue Average Runs = 
+AVERAGE('T20_Matches'[Total_Match_Runs])
+
+Venue High Scoring Status = 
+IF([Venue Average Runs] >= 300, "High Scoring Ground", "Bowling Friendly / Balanced")
+
+
+// --- 4. PLAYER OF THE MATCH INSIGHTS ---
+
+Player POM Awards Count = 
+COUNTROWS('T20_Matches')
+
+Top MVP Rank = 
+RANKX(
+    ALLSELECTED('T20_Matches'[Player_Of_The_Match]),
+    [Player POM Awards Count],
+    ,
+    DESC,
+    Dense
+)

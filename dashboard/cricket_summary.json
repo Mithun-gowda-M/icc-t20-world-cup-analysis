@@ -1,0 +1,420 @@
+{
+  "kpis": {
+    "totalTournaments": 7,
+    "totalMatches": 223,
+    "totalRuns": 61945,
+    "totalWickets": 2719,
+    "avgRunsPerMatch": 277.8,
+    "avgWicketsPerMatch": 12.2
+  },
+  "editions": [
+    {
+      "year": 2007,
+      "matches": 27,
+      "totalRuns": 7881,
+      "totalWickets": 349,
+      "avgScorePerMatch": 291.9
+    },
+    {
+      "year": 2009,
+      "matches": 27,
+      "totalRuns": 7625,
+      "totalWickets": 337,
+      "avgScorePerMatch": 282.4
+    },
+    {
+      "year": 2010,
+      "matches": 27,
+      "totalRuns": 7413,
+      "totalWickets": 346,
+      "avgScorePerMatch": 274.6
+    },
+    {
+      "year": 2012,
+      "matches": 27,
+      "totalRuns": 7448,
+      "totalWickets": 314,
+      "avgScorePerMatch": 275.9
+    },
+    {
+      "year": 2014,
+      "matches": 35,
+      "totalRuns": 9684,
+      "totalWickets": 426,
+      "avgScorePerMatch": 276.7
+    },
+    {
+      "year": 2016,
+      "matches": 35,
+      "totalRuns": 9732,
+      "totalWickets": 421,
+      "avgScorePerMatch": 278.1
+    },
+    {
+      "year": 2021,
+      "matches": 45,
+      "totalRuns": 12162,
+      "totalWickets": 526,
+      "avgScorePerMatch": 270.3
+    }
+  ],
+  "topTeams": [
+    {
+      "team": "Sri Lanka",
+      "matches": 43,
+      "wins": 27,
+      "losses": 16,
+      "tieNoResult": 0,
+      "winRatePct": 62.8
+    },
+    {
+      "team": "Pakistan",
+      "matches": 40,
+      "wins": 24,
+      "losses": 16,
+      "tieNoResult": 0,
+      "winRatePct": 60
+    },
+    {
+      "team": "India",
+      "matches": 38,
+      "wins": 24,
+      "losses": 14,
+      "tieNoResult": 0,
+      "winRatePct": 63.2
+    },
+    {
+      "team": "South Africa",
+      "matches": 35,
+      "wins": 22,
+      "losses": 13,
+      "tieNoResult": 0,
+      "winRatePct": 62.9
+    },
+    {
+      "team": "Australia",
+      "matches": 36,
+      "wins": 22,
+      "losses": 14,
+      "tieNoResult": 0,
+      "winRatePct": 61.1
+    },
+    {
+      "team": "New Zealand",
+      "matches": 36,
+      "wins": 20,
+      "losses": 16,
+      "tieNoResult": 0,
+      "winRatePct": 55.6
+    },
+    {
+      "team": "England",
+      "matches": 38,
+      "wins": 19,
+      "losses": 19,
+      "tieNoResult": 0,
+      "winRatePct": 50
+    },
+    {
+      "team": "West Indies",
+      "matches": 36,
+      "wins": 18,
+      "losses": 18,
+      "tieNoResult": 0,
+      "winRatePct": 50
+    },
+    {
+      "team": "Bangladesh",
+      "matches": 33,
+      "wins": 7,
+      "losses": 26,
+      "tieNoResult": 0,
+      "winRatePct": 21.2
+    },
+    {
+      "team": "Afghanistan",
+      "matches": 19,
+      "wins": 7,
+      "losses": 12,
+      "tieNoResult": 0,
+      "winRatePct": 36.8
+    },
+    {
+      "team": "Zimbabwe",
+      "matches": 12,
+      "wins": 5,
+      "losses": 7,
+      "tieNoResult": 0,
+      "winRatePct": 41.7
+    },
+    {
+      "team": "Netherlands",
+      "matches": 14,
+      "wins": 5,
+      "losses": 9,
+      "tieNoResult": 0,
+      "winRatePct": 35.7
+    }
+  ],
+  "topVenues": [
+    {
+      "venue": "R.Premadasa Stadium, Colombo",
+      "matches": 15,
+      "totalRuns": 3994,
+      "avgMatchScore": 266.3
+    },
+    {
+      "venue": "Zahur Ahmed Chowdhury Stadium, Chattogram",
+      "matches": 15,
+      "totalRuns": 3999,
+      "avgMatchScore": 266.6
+    },
+    {
+      "venue": "Sheikh Zayed Stadium, Abu Dhabi",
+      "matches": 15,
+      "totalRuns": 4097,
+      "avgMatchScore": 273.1
+    },
+    {
+      "venue": "Shere Bangla National Stadium, Dhaka",
+      "matches": 14,
+      "totalRuns": 3927,
+      "avgMatchScore": 280.5
+    },
+    {
+      "venue": "Dubai International Cricket Stadium, Dubai",
+      "matches": 13,
+      "totalRuns": 3396,
+      "avgMatchScore": 261.2
+    },
+    {
+      "venue": "Kensington Oval, Bridgetown, Barbados",
+      "matches": 11,
+      "totalRuns": 3187,
+      "avgMatchScore": 289.7
+    },
+    {
+      "venue": "Sharjah Cricket Stadium, Sharjah",
+      "matches": 11,
+      "totalRuns": 3019,
+      "avgMatchScore": 274.5
+    },
+    {
+      "venue": "Trent Bridge, Nottingham",
+      "matches": 10,
+      "totalRuns": 2868,
+      "avgMatchScore": 286.8
+    },
+    {
+      "venue": "Daren Sammy National Cricket Stadium, Gros Islet, St Lucia",
+      "matches": 10,
+      "totalRuns": 3039,
+      "avgMatchScore": 303.9
+    },
+    {
+      "venue": "The Wanderers Stadium, Johannesburg",
+      "matches": 9,
+      "totalRuns": 3005,
+      "avgMatchScore": 333.9
+    }
+  ],
+  "topPlayers": [
+    {
+      "player": "Chris Gayle",
+      "awards": 5,
+      "team": "South Africa"
+    },
+    {
+      "player": "NA",
+      "awards": 5,
+      "team": "NA"
+    },
+    {
+      "player": "Mahela Jayawardene",
+      "awards": 5,
+      "team": "Sri Lanka"
+    },
+    {
+      "player": "Shane Watson",
+      "awards": 5,
+      "team": "Australia"
+    },
+    {
+      "player": "Virat Kohli",
+      "awards": 5,
+      "team": "India"
+    },
+    {
+      "player": "Shahid Afridi",
+      "awards": 4,
+      "team": "Pakistan"
+    },
+    {
+      "player": "AB de Villiers",
+      "awards": 4,
+      "team": "South Africa"
+    },
+    {
+      "player": "Tillakaratne Dilshan",
+      "awards": 4,
+      "team": "Sri Lanka"
+    },
+    {
+      "player": "Kevin Pietersen",
+      "awards": 3,
+      "team": "England"
+    },
+    {
+      "player": "Sanath Jayasuriya",
+      "awards": 3,
+      "team": "Sri Lanka"
+    },
+    {
+      "player": "Yuvraj Singh",
+      "awards": 3,
+      "team": "India"
+    },
+    {
+      "player": "Umar Gul",
+      "awards": 3,
+      "team": "Pakistan"
+    },
+    {
+      "player": "Luke Wright",
+      "awards": 3,
+      "team": "England"
+    },
+    {
+      "player": "Daren Sammy",
+      "awards": 3,
+      "team": "West Indies"
+    },
+    {
+      "player": "Angelo Mathews",
+      "awards": 3,
+      "team": "Sri Lanka"
+    }
+  ],
+  "recentFinals": [
+    {
+      "edition": 2007,
+      "matchNo": "27",
+      "date": "2007-09-24",
+      "stage": "Final",
+      "team1": "India",
+      "team2": "Pakistan",
+      "venue": "The Wanderers Stadium, Johannesburg",
+      "winScoreRaw": "157/5(20 overs)",
+      "loseScoreRaw": "152(19.3 overs)",
+      "winner": "India",
+      "result": "India won by 5 runs",
+      "playerOfTheMatch": "Irfan Pathan",
+      "winningRuns": 157,
+      "winningWickets": 5,
+      "losingRuns": 152,
+      "losingWickets": 10,
+      "totalMatchRuns": 309,
+      "totalMatchWickets": 15
+    },
+    {
+      "edition": 2009,
+      "matchNo": "27",
+      "date": "2009-06-21",
+      "stage": "Final",
+      "team1": "Pakistan",
+      "team2": "Sri Lanka",
+      "venue": "Lord's, London",
+      "winScoreRaw": "138/6(20 overs)",
+      "loseScoreRaw": "139/2(18.4 overs)",
+      "winner": "Pakistan",
+      "result": "Pakistan won by 8 wickets",
+      "playerOfTheMatch": "Shahid Afridi",
+      "winningRuns": 138,
+      "winningWickets": 6,
+      "losingRuns": 139,
+      "losingWickets": 2,
+      "totalMatchRuns": 277,
+      "totalMatchWickets": 8
+    },
+    {
+      "edition": 2010,
+      "matchNo": "27",
+      "date": "2010-05-16",
+      "stage": "Final",
+      "team1": "Australia",
+      "team2": "England",
+      "venue": "Kensington Oval, Bridgetown, Barbados",
+      "winScoreRaw": "148/3(17 overs)",
+      "loseScoreRaw": "147/6(20 overs)",
+      "winner": "England",
+      "result": "England won by 7 wickets",
+      "playerOfTheMatch": "Craig Kieswetter",
+      "winningRuns": 148,
+      "winningWickets": 3,
+      "losingRuns": 147,
+      "losingWickets": 6,
+      "totalMatchRuns": 295,
+      "totalMatchWickets": 9
+    },
+    {
+      "edition": 2014,
+      "matchNo": "35",
+      "date": "2014-06-04",
+      "stage": "Final",
+      "team1": "India",
+      "team2": "Sri Lanka",
+      "venue": "Shere Bangla National Stadium, Dhaka",
+      "winScoreRaw": "134/4(17.5 overs)",
+      "loseScoreRaw": "130/4(20 overs)",
+      "winner": "Sri Lanka",
+      "result": "Sri Lanka won by 6 wickets",
+      "playerOfTheMatch": "Kumar Sangakkara",
+      "winningRuns": 134,
+      "winningWickets": 4,
+      "losingRuns": 130,
+      "losingWickets": 4,
+      "totalMatchRuns": 264,
+      "totalMatchWickets": 8
+    },
+    {
+      "edition": 2016,
+      "matchNo": "35",
+      "date": "2016-03-04",
+      "stage": "Final",
+      "team1": "England",
+      "team2": "West Indies",
+      "venue": "Eden Gardens, Kolkata",
+      "winScoreRaw": "161/6(19.4 overs)",
+      "loseScoreRaw": "155/9(20 overs)",
+      "winner": "West Indies",
+      "result": "West Indies won by 4 wickets",
+      "playerOfTheMatch": "Marlon Samuels",
+      "winningRuns": 161,
+      "winningWickets": 6,
+      "losingRuns": 155,
+      "losingWickets": 9,
+      "totalMatchRuns": 316,
+      "totalMatchWickets": 15
+    },
+    {
+      "edition": 2021,
+      "matchNo": "45",
+      "date": "2021-11-14",
+      "stage": "Final",
+      "team1": "New Zealand",
+      "team2": "Australia",
+      "venue": "Dubai International Cricket Stadium, Dubai",
+      "winScoreRaw": "173/2(18.5 overs)",
+      "loseScoreRaw": "172/4(20 overs)",
+      "winner": "Australia",
+      "result": "Australia won by 8 wickets",
+      "playerOfTheMatch": "Mitchell Marsh",
+      "winningRuns": 173,
+      "winningWickets": 2,
+      "losingRuns": 172,
+      "losingWickets": 4,
+      "totalMatchRuns": 345,
+      "totalMatchWickets": 6
+    }
+  ]
+}

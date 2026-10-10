@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICC Men's T20 World Cup Historical Analytics (2007–2021)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Header -->
+    <header class="top-header">
+      <div class="brand">
+        <div class="cricket-logo">🏏</div>
+        <div>
+          <h1>ICC Men's T20 World Cup Analytics (2007–2021)</h1>
+          <p class="subtitle">Seven Tournament Editions • Team Win-Loss Ratios • Venue Scoring Dynamics • MVP Player of the Match Insights</p>
+        </div>
+      </div>
+      <div class="header-badges">
+        <span class="edition-badge">2007 • South Africa</span>
+        <span class="edition-badge">2009 • England</span>
+        <span class="edition-badge">2010 • West Indies</span>
+        <span class="edition-badge">2012 • Sri Lanka</span>
+        <span class="edition-badge">2014 • Bangladesh</span>
+        <span class="edition-badge">2016 • India</span>
+        <span class="edition-badge active">2021 • UAE & Oman</span>
+      </div>
+    </header>
+
+    <!-- KPI Metric Cards Grid -->
+    <section class="kpi-grid">
+      <div class="kpi-card accent-blue">
+        <div class="kpi-icon">🏆</div>
+        <div class="kpi-details">
+          <span class="kpi-label">Total Matches Played</span>
+          <span class="kpi-value" id="kpiMatches">223</span>
+          <span class="kpi-badge neutral">7 World Cup Editions</span>
+        </div>
+      </div>
+      <div class="kpi-card accent-amber">
+        <div class="kpi-icon">⚡</div>
+        <div class="kpi-details">
+          <span class="kpi-label">Total Runs Scored</span>
+          <span class="kpi-value" id="kpiRuns">61,945</span>
+          <span class="kpi-badge positive">Aggressive T20 Batting</span>
+        </div>
+      </div>
+      <div class="kpi-card accent-rose">
+        <div class="kpi-icon">🎯</div>
+        <div class="kpi-details">
+          <span class="kpi-label">Total Wickets Taken</span>
+          <span class="kpi-value" id="kpiWickets">2,719</span>
+          <span class="kpi-badge neutral">Bowling Breakthroughs</span>
+        </div>
+      </div>
+      <div class="kpi-card accent-emerald">
+        <div class="kpi-icon">📊</div>
+        <div class="kpi-details">
+          <span class="kpi-label">Avg Match Aggregate</span>
+          <span class="kpi-value" id="kpiAvgRuns">277.8 Runs</span>
+          <span class="kpi-badge positive">Combined Innings Avg</span>
+        </div>
+      </div>
+      <div class="kpi-card accent-purple">
+        <div class="kpi-icon">🔥</div>
+        <div class="kpi-details">
+          <span class="kpi-label">Avg Wickets / Match</span>
+          <span class="kpi-value" id="kpiAvgWickets">12.2 Wickets</span>
+          <span class="kpi-badge neutral">Pace & Spin Impact</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Visuals Grid -->
+    <main class="dashboard-grid">
+      <!-- Tournament Evolution Timeline -->
+      <div class="card visual-span-2">
+        <div class="card-header">
+          <h2>Tournament Growth Timeline (Runs Scored & Match Volume)</h2>
+          <span class="card-tag">Edition Expansion</span>
+        </div>
+        <div class="chart-container">
+          <canvas id="timelineChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Team Win-Loss Ratios -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Top Teams Win-Loss Record</h2>
+          <span class="card-tag">Win Rate %</span>
+        </div>
+        <div class="chart-container">
+          <canvas id="teamChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Venue Distribution & Scoring -->
+      <div class="card visual-span-2">
+        <div class="card-header">
+          <h2>Top Host Venues (Matches Hosted & Scoring Pitch Behavior)</h2>
+          <span class="card-tag">Ground Dynamics</span>
+        </div>
+        <div class="chart-container">
+          <canvas id="venueChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Player of the Match Leaders -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Player of the Match MVP Leaders</h2>
+          <span class="card-tag">Match Winners</span>
+        </div>
+        <div class="chart-container">
+          <canvas id="pomChart"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <!-- Finals History Showcase Table -->
+    <section class="card">
+      <div class="card-header">
+        <h2>T20 World Cup Grand Finals Chronicle (2007–2021)</h2>
+        <span class="card-tag">Championship Clashes</span>
+      </div>
+      <div class="table-responsive">
+        <table class="data-table" id="finalsTable">
+          <thead>
+            <tr>
+              <th>Edition</th>
+              <th>Champion</th>
+              <th>Runner Up</th>
+              <th>Winning Score</th>
+              <th>Losing Score</th>
+              <th>Final Margin & Result</th>
+              <th>Player of the Final</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <p>Power BI Mini Project 5 • ICC T20 World Cup Historical Analysis (2007–2021) • Cricket Intelligence Suite</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
